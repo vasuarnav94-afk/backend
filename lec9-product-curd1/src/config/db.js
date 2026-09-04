@@ -1,0 +1,12 @@
+const { default: mongoose } = require("mongoose")
+
+const connectdb = async()=>{
+   try {
+    await mongoose.connect("mongodb+srv://Arnav-vasu:Arnav2198@fs35-backend.enfcvp1.mongodb.net/pr")
+    console.log("mongoose connected")
+   } catch (error) {
+    console.log("error in mongodb", error)
+   }
+}
+
+module.exports = connectdb
